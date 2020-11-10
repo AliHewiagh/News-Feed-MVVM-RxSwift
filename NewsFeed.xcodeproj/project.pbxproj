@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,7 +14,7 @@
 		4A01AC5D25592EFA00E15224 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A01AC5B25592EFA00E15224 /* LaunchScreen.storyboard */; };
 		4A01AC6825592EFA00E15224 /* NewsFeedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A01AC6725592EFA00E15224 /* NewsFeedTests.swift */; };
 		4A01AC7325592EFA00E15224 /* NewsFeedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A01AC7225592EFA00E15224 /* NewsFeedUITests.swift */; };
-		4A01AC8F2559396500E15224 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A01AC8E2559396500E15224 /* ApiManager.swift */; };
+		4A01AC8F2559396500E15224 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A01AC8E2559396500E15224 /* ApiClient.swift */; };
 		4A01AC95255939A200E15224 /* NewsFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A01AC94255939A200E15224 /* NewsFeedViewController.swift */; };
 		4A01AC9E25593A8700E15224 /* NewsFeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A01AC9D25593A8700E15224 /* NewsFeedViewModel.swift */; };
 		4A01ACA325593AAA00E15224 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A01ACA225593AAA00E15224 /* Article.swift */; };
@@ -61,7 +61,7 @@
 		4A01AC6E25592EFA00E15224 /* NewsFeedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsFeedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A01AC7225592EFA00E15224 /* NewsFeedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedUITests.swift; sourceTree = "<group>"; };
 		4A01AC7425592EFA00E15224 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4A01AC8E2559396500E15224 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		4A01AC8E2559396500E15224 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		4A01AC94255939A200E15224 /* NewsFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewController.swift; sourceTree = "<group>"; };
 		4A01AC9D25593A8700E15224 /* NewsFeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsFeedViewModel.swift; sourceTree = "<group>"; };
 		4A01ACA225593AAA00E15224 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
@@ -111,7 +111,6 @@
 				3FE25B5FF72AED95A61999CE /* Pods-NewsFeedTests.debug.xcconfig */,
 				51202109E4642466FFC311E7 /* Pods-NewsFeedTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -225,7 +224,7 @@
 		4A01AC8C2559391000E15224 /* ApiManager */ = {
 			isa = PBXGroup;
 			children = (
-				4A01AC8E2559396500E15224 /* ApiManager.swift */,
+				4A01AC8E2559396500E15224 /* ApiClient.swift */,
 			);
 			path = ApiManager;
 			sourceTree = "<group>";
@@ -502,7 +501,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A01ACA325593AAA00E15224 /* Article.swift in Sources */,
-				4A01AC8F2559396500E15224 /* ApiManager.swift in Sources */,
+				4A01AC8F2559396500E15224 /* ApiClient.swift in Sources */,
 				4A01ACAD25593B1500E15224 /* ArticleRepository.swift in Sources */,
 				4A01AC5525592EF600E15224 /* ViewController.swift in Sources */,
 				4A01AC5125592EF600E15224 /* AppDelegate.swift in Sources */,
