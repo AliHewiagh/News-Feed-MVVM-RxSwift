@@ -3,10 +3,6 @@
 > 
 
 
-## Requirements
-
-- iOS 13.0+
-- Swift 4
 
 ## Getting Started
 
@@ -18,10 +14,7 @@
 
 #### Third Party Libraries
 
-1. SnapKit
-2. RxSwift
-3. RxCocoa
-4. SwiftyJSON
+1. Almofire
 
 ## LICENSE
 This project is licensed under [ISC](https://opensource.org/licenses/ISC) license.
