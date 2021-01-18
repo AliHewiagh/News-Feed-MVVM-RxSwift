@@ -7,15 +7,27 @@
 
 import Foundation
 
+protocol NewsFeedViewModelProtocol {
+//    var didFetchData: (()->())? { get set }
+//    var didFail: ((_ error: String)->())? { get set }
+//    var currentWeather: WeatherVMProtocol? { get }
+//    var hourlyWeather: [WeatherVMProtocol]? { get }
+//    var dailyWeather: [DailyWeatherVMProtocol]? { get }
+    func setDependencies(provider: NewsAPIProtocol)
+    func getNewsFeed()
+}
+
 
 class NewsFeedViewModel {
     
+    
+    
     // MARK: - Properties
-    private let articleRepository: ArticleRepository
+    private var provider: NewsAPIProtocol?
     
     
-    init(articleRepository: ArticleRepository = ArticleRepository(apiClient: ApiClient())) {
-        self.articleRepository = articleRepository
+    init() {
+        
     }
     
 }
@@ -23,16 +35,26 @@ class NewsFeedViewModel {
 
 extension NewsFeedViewModel {
     
+    func setDependencies(provider: NewsAPIProtocol) {
+        self.provider = provider
+    }
     
     func getNewsFeed() {
-//        print("FFFFFFFF :\(self.articleRepository.getAll())")
-        self.articleRepository.getAlle( completion: { (result) in
-
-            print("Result : \(result)")
-       })
-        
-   
-        
-        
+        print("ddddd")
+        self.provider?.getNewsList(completion: { (result) in
+            print("Result: \(result)")
+            switch result {
+            case .success(let newsResponse):
+                print("sucess : \(newsResponse?.totalResults)")
+                print("sucess : \(newsResponse?.data)")
+                for a in newsResponse?.data ?? [] {
+                    print("author => \(a.author)")
+                    print("description => \(a.description)")
+                    print("title => \(a.title)")
+                }
+            case .failure(let error):
+                print(error)
+            }
+        })
     }
 }

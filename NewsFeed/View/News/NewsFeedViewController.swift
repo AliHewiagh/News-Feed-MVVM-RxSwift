@@ -10,11 +10,13 @@ import UIKit
 class NewsFeedViewController: UIViewController {
     
     
-    
-    let newsFeedViewModel: NewsFeedViewModel
+    private var newsFeedViewModel: NewsFeedViewModel?
+//    let newsFeedViewModel: NewsFeedViewModel
     
     init(){
-       self.newsFeedViewModel = NewsFeedViewModel()
+        self.newsFeedViewModel = NewsFeedViewModel()
+        self.newsFeedViewModel?.setDependencies(provider: NewsAPI())
+ 
        super.init(nibName: nil, bundle: nil)
    }
    
@@ -23,13 +25,20 @@ class NewsFeedViewController: UIViewController {
    }
     
     
+    
+//    viewModel.setDependencies(provider: WeatherProvider())
+//            currentVC.viewModel = viewModel
+    
     // MARK: - View Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = .gray
-    
+        
+        
+    print("dddd")
 //        getNewsFeed
-        self.newsFeedViewModel.getNewsFeed()
+        
+        self.newsFeedViewModel?.getNewsFeed()
     }
     
     
